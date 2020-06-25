@@ -1,7 +1,7 @@
 ### Used command list:
 
 ### 1 - Create your module
-go mod init <name>
+go mod init MODULE_NAME
 
 ### 2 - Install go packages
 go get -u github.com/golang/protobuf/proto <br/>
