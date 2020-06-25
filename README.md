@@ -4,16 +4,16 @@
 go mod init <name>
 
 ### 2 - Install go packages
-go get -u github.com/golang/protobuf/proto 
-go get -u github.com/golang/protobuf/protoc-gen-go 
-go get github.com/ktr0731/evans 
+go get -u github.com/golang/protobuf/proto <br/>
+go get -u github.com/golang/protobuf/protoc-gen-go <br/>
+go get github.com/ktr0731/evans <br/>
 
 ### 3 - Generated proto files to package go 
 protoc --proto_path=proto proto/*.proto --go_out=plugins=grpc:pb
 
 ### 4 - Run
-go run cmd/server/server.go
-go run cmd/client/client.go or evans -r -p PORT
+go run cmd/server/server.go <br />
+go run cmd/client/client.go <b>or</br> evans -r -p PORT
 
 ### Folders
 
