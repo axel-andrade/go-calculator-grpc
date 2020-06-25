@@ -13,7 +13,7 @@ protoc --proto_path=proto proto/*.proto --go_out=plugins=grpc:pb
 
 ### 4 - Run
 go run cmd/server/server.go <br />
-go run cmd/client/client.go <b>or</br> evans -r -p PORT
+go run cmd/client/client.go <b>or</b> evans -r -p PORT
 
 ### Folders
 
