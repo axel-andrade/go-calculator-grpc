@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package math;
+
+/* Define package folder to protocol buffers */
+option go_package = ".;pb";
+
+/* The numbers are order */
+message Sum {
+  float a = 1;
+  float b = 2;
+}
+
+message NewSumRequest {
+  Sum sum = 1;
+}
+
+message NewSumResponse {
+  float result = 1;
+}
+
+message Multiplication {
+  float a = 1;
+  float b = 2;
+}
+
+message NewMultiplicationRequest {
+  Multiplication multiplication = 1;
+}
+
+message NewMultiplicationResponse {
+  float result = 1;
+}
+
+message FibonacciRequest {
+  int32 n = 1;
+}
+
+message FibonacciResponse {
+  int32 result = 1;
+}
+
+/* Define rpc service ( execute server function on client ) */
+service MathService {
+  rpc Sum(NewSumRequest) returns (NewSumResponse) {};
+  rpc Multiplication(NewMultiplicationRequest) returns (NewMultiplicationResponse) {};
+  rpc Fibonacci(FibonacciRequest) returns (stream FibonacciResponse){};
+}
